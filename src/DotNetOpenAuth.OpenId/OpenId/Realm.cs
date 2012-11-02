@@ -326,7 +326,7 @@ namespace DotNetOpenAuth.OpenId {
 				builder.Host = "*." + builder.Host;
 				return builder.ToStringWithImpliedPorts();
 			} else {
-				return this.uri.AbsoluteUri;
+				return this.uri.OriginalString;
 			}
 		}
 
