@@ -26,13 +26,7 @@
 		<ILMergeTargetPlatformVersion Condition=" '$(TargetFrameworkVersion)' == 'v4.5' ">4.5</ILMergeTargetPlatformVersion>
 		<BuildCodeContractsReferenceAssemblies>false</BuildCodeContractsReferenceAssemblies>
 
-		<SignAssembly>true</SignAssembly>
-		<PublicKeyFile Condition="'$(PublicKeyFile)' == ''">$(ProjectRoot)src\official-build-key.pub</PublicKeyFile>
-		<AssemblyOriginatorKeyFile Condition="'$(AssemblyOriginatorKeyFile)' == ''">$(PublicKeyFile)</AssemblyOriginatorKeyFile>
-		<KeyPairContainer Condition="'$(KeyPairContainer)' == ''">DotNetOpenAuth</KeyPairContainer>
-		<PublicKeyToken>2780CCD10D57B246</PublicKeyToken>
-		<DelaySign>true</DelaySign>
-		<SignedSubPath>signed\</SignedSubPath>
+		<SignAssembly>false</SignAssembly>
 
 		<ILMergeOutputAssemblyDirectory>$(OutputPath)unified\</ILMergeOutputAssemblyDirectory>
 		<ILMergeOutputAssembly35Directory>$(OutputPath35)unified\</ILMergeOutputAssembly35Directory>
