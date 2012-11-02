@@ -19,6 +19,7 @@ namespace DotNetOpenAuth.OpenId.Messages {
 	using DotNetOpenAuth.Messaging.Bindings;
 	using DotNetOpenAuth.Messaging.Reflection;
 	using DotNetOpenAuth.OpenId.ChannelElements;
+	using DotNetOpenAuth.OpenId.RelyingParty;
 
 	/// <summary>
 	/// An indirect message from a Provider to a Relying Party where at least part of the
@@ -397,6 +398,8 @@ namespace DotNetOpenAuth.OpenId.Messages {
 		///    also be present with the same values in the URL of the HTTP request the RP received.
 		/// </remarks>
 		private void VerifyReturnToMatchesRecipient() {
+			if (ReturnToValidationSuppression.IsSuppressed)
+				return;
 			ErrorUtilities.VerifyProtocol(
 				string.Equals(this.Recipient.Scheme, this.ReturnTo.Scheme, StringComparison.OrdinalIgnoreCase) &&
 				string.Equals(this.Recipient.Authority, this.ReturnTo.Authority, StringComparison.OrdinalIgnoreCase) &&

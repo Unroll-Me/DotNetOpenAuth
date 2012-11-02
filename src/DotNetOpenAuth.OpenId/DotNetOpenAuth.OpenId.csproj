@@ -145,6 +145,7 @@
     <Compile Include="OpenId\Protocol.cs" />
     <Compile Include="OpenId\IOpenIdApplicationStore.cs" />
     <Compile Include="OpenId\RelyingParty\RelyingPartySecuritySettings.cs" />
+    <Compile Include="OpenId\RelyingParty\ReturnToValidationSuppression.cs" />
     <Compile Include="OpenId\UriDiscoveryService.cs" />
     <Compile Include="OpenId\XriDiscoveryProxyService.cs" />
     <Compile Include="OpenId\SecuritySettings.cs" />
